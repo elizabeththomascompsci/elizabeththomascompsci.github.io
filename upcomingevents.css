@@ -1,0 +1,158 @@
+body,
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1em;
+}
+
+.container {
+  background-image: url("https://images.fineartamerica.com/images-medium-large-5/map-of-the-world-8-colorful-abstract-art-sharon-cummings.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#drawer {
+  position: fixed;
+  top: 0;
+  height: 80%;
+  width: 100%;
+  font-family: 'Prata', serif;
+  font-size: 1.1em;
+  z-index: 1000;
+}
+
+#drawer ul {
+  list-style: none;
+  position: relative;
+  /* So the first submenu can be positioned within the main menu */
+}
+
+#drawer ul li {
+  float: left;
+  font-family: 'Prata', serif;
+  font-size: 1em;
+}
+
+#drawer ul ul {
+  display: none;
+  /* Don't display submenu until hover of the li element */
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  /* Position the submenu at the bottom of the main menu */
+}
+
+#drawer ul ul li {
+  float: none;
+  /* Display the submenus vertically */
+  position: relative;
+  /* So the second submenu can be positioned within the first submenu */
+}
+
+#drawer ul ul li ul {
+  position: absolute;
+  left: 50;
+  /* Position the second submenu at the left side of the li element */
+  top: 0;
+  /* Position the second submenu at the top of the li element */
+}
+
+#drawer ul li:hover > ul {
+  display: block;
+  /* Display the submenu on hover of the li element */
+}
+
+#drawer ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* Styles for the formatting of the multi-tier navigation menu */
+#drawer ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#drawer ul li {
+  width: 25%;
+}
+
+#drawer ul li a {
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  text-decoration: none;
+  background-color: #9ACA92;
+  color: white;
+  font-weight: bold;
+}
+
+#drawer ul li a.current {
+  color: aquamarine;
+}
+
+#drawer ul li a:hover,
+#drawer ul li a:focus {
+  background-color: gray;
+}
+
+#drawer ul li:hover ul {
+  width: 100%;
+}
+
+#drawer ul li:hover ul li a {
+  display: block;
+  /* width: 178px; */
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  height: 600px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.events {
+  text-align: center;
+  font-family: 'Prata', serif;
+}
+
+.bold {
+  font-weight: bold
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: 600;
+  font-size: 65px;
+  text-transform: uppercase;
+  padding-top: 1.25em;
+}
+
+p {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Prata', serif;
+}
+
+.info {
+    margin-left: 12vw;
+    width: 70vw;
+}
+
+@media only screen and (min-width: 320px) and (max-width:768px) {
+
+#drawer {
+  font-size: .8em;
+}  
+
+}
